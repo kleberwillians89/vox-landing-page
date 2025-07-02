@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vox Strategy AI - Soluções Criativas com Inteligência Real</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#710073',
+            secondary: '#3a0142'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #3a0142 0%, #710073 100%);
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .video-container iframe,
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #710073;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Cabeçalho fixo no topo -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white bg-opacity-95 shadow-md">
+    
+    <!-- Container do conteúdo principal do header -->
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      
+      <!-- Logotipo -->
+      <a href="#" class="flex items-center">
+        <img src="assets/images/VOX1.png" alt="Vox Strategy" class="h-20 mt-1 scale-[1.6]">
+      </a>
+
+      <!-- Menu de navegação para desktop -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#sobre" class="text-gray-700 hover:text-primary font-medium transition-colors">Sobre</a>
+        <a href="#servicos" class="text-gray-700 hover:text-primary font-medium transition-colors">Serviços</a>
+        <a href="#quem-somos" class="text-gray-700 hover:text-primary font-medium transition-colors">Quem Somos</a>
+        <a href="#videos" class="text-gray-700 hover:text-primary font-medium transition-colors">Vídeos</a>
+        <a href="#contato" class="text-gray-700 hover:text-primary font-medium transition-colors">Contato</a>
+      </nav>
+
+      <!-- Botão do menu mobile -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-toggle" class="w-10 h-10 flex items-center justify-center text-gray-700">
+          <i class="ri-menu-line ri-2x"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu mobile (inicialmente oculto) -->
+    <div id="mobile-menu" class="hidden md:hidden w-full bg-white">
+      <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+        <a href="#sobre" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Sobre</a>
+        <a href="#servicos" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Serviços</a>
+        <a href="#quem-somos" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Quem Somos</a>
+        <a href="#videos" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Vídeos</a>
+        <a href="#contato" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contato</a>
+      </div>
+    </div>
+    
+  </header>
+<section id="hero" class="gradient-bg min-h-screen flex items-center justify-center pt-20">
+  <div class="container mx-auto px-6 py-20 text-center w-full">
+    <h1 class="text-6xl md:text-7xl font-bold text-white mb-6">Somos o I da IA</h1>
+    <div class="max-w-5xl mx-auto mb-12">
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4">O mais importante da IA é o I, da inteligência.</h2>
+      <p class="text-2xl text-white mb-6">Sem o I, a IA é apenas artificial.</p>
+      <p class="text-xl text-white/90 leading-relaxed mb-8">
+        A Vox tem profissionais com anos de experiência em marketing e criação publicitária, que entendem de gente e sabem contar boas histórias. É essa inteligência criativa, estratégica e humana, que pensa, interpreta e usa a IA para gerar conteúdo.
+      </p>
+    </div>
+    <div class="max-w-5xl mx-auto mb-8">
+      <video autoplay controls loading="lazy" class="rounded-lg shadow-xl w-full h-auto">
+        <source src="assets/images/videos/site-em-construcao.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+    </div>
+    <a href="#contato" class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+      Fale com a Vox
+    </a>
+  </div>
+</section>
+</section>
+
+<!-- Seção de Serviços -->
+<section id="servicos" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Nossos Serviços</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card: Filmes com IA -->
+      <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 card-hover">
+        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="ri-movie-2-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Filmes com IA</h3>
+        <p class="text-gray-600 text-center">
+          Produções audiovisuais de alta qualidade utilizando tecnologia de inteligência artificial avançada.
+        </p>
+      </div>
+
+      <!-- Card: Automação de Processos -->
+      <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 card-hover">
+        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="ri-settings-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Automação de Processos</h3>
+        <p class="text-gray-600 text-center">
+          Otimização de fluxos de trabalho com soluções inteligentes para aumentar a eficiência operacional.
+        </p>
+      </div>
+
+      <!-- Card: Social Media -->
+      <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 card-hover">
+        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="ri-instagram-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Social Media</h3>
+        <p class="text-gray-600 text-center">
+          Estratégias personalizadas para redes sociais com conteúdo gerado por IA para maximizar engajamento.
+        </p>
+      </div>
+
+      <!-- Card: Branding -->
+      <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 card-hover">
+        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="ri-palette-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Branding</h3>
+        <p class="text-gray-600 text-center">
+          Desenvolvimento de identidade visual e posicionamento de marca com insights baseados em dados.
+        </p>
+      </div>
+
+      <!-- Card: Dev | CRM | Sites -->
+      <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 card-hover">
+        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="ri-code-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Dev | CRM | Sites</h3>
+        <p class="text-gray-600 text-center">
+          Soluções tecnológicas completas para presença digital, gestão de clientes e desenvolvimento web.
+        </p>
+      </div>
+
+      <!-- Card: Mídia Programática -->
+      <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 card-hover">
+        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="ri-line-chart-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Mídia Programática</h3>
+        <p class="text-gray-600 text-center">
+          Campanhas publicitárias inteligentes com otimização automática para melhor ROI e alcance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Seção: Quem Somos -->
+<section id="quem-somos" class="py-20 gradient-bg">
+  <div class="container mx-auto px-6">
+    
+    <!-- Título da seção -->
+    <h2 class="text-4xl font-bold text-center mb-16 text-white">Quem Faz a Vox</h2>
+    
+    <!-- Grid com os membros da equipe -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+
+      <!-- Card: Bruno Siqueira -->
+      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        
+        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary">
+          <img src="assets/images/bruno.png" alt="Bruno Siqueira" class="w-full h-full object-cover object-center">
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Bruno Siqueira</h3>
+        <p class="text-primary font-medium mb-4">CEO & Estrategista Digital</p>
+        <p class="text-gray-600">
+          Especialista em marketing digital com mais de 15 anos de experiência em transformação digital e estratégias de crescimento para empresas.
+        </p>
+        <a href="https://www.linkedin.com/in/bruno-siqueira/" target="_blank" class="text-primary hover:underline">LinkedIn</a>
+      </div>
+
+      <!-- Card: Danilo Portela -->
+      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        
+        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary">
+          <img src="assets/images/danilo.png" alt="Danilo Portela" class="w-full h-full object-cover object-top">
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Danilo Portela</h3>
+        <p class="text-primary font-medium mb-4">CTO & Especialista em IA</p>
+        <p class="text-gray-600">
+          Pioneiro em soluções de inteligência artificial aplicadas ao marketing, com formação em engenharia de software e mestrado em ciência de dados.
+        </p>
+        <a href="https://www.linkedin.com/in/danilo-portela-52693b34/" target="_blank" class="text-primary hover:underline">LinkedIn</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="videos" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-5xl font-bold text-center mb-16 text-gray-800">Nossos Vídeos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <div class="video-container" style="padding-bottom: 60%;">
+        <video controls loading="lazy" class="rounded-lg shadow-lg">
+          <source src="assets/images/videos/treelife_omega.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-container" style="padding-bottom: 60%;">
+        <video controls loading="lazy" class="rounded-lg shadow-lg">
+          <source src="assets/images/videos/vox.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-container" style="padding-bottom: 60%;">
+        <video controls loading="lazy" class="rounded-lg shadow-lg">
+          <source src="assets/images/videos/deep_sleep_5.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p class="text-center text-gray-800 italic font-semibold max-w-7xl mx-auto text-xl">
+      Todos os vídeos acima foram produzidos com 100% de Inteligência Artificial.
+    </p>
+  </div>
+</section>
+
+<section id="contato" class="py-20">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Entre em Contato</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+  <div>
+    <form id="form-contato" class="space-y-6">
+      <div>
+        <label for="nome" class="block text-gray-700 font-medium mb-2">Nome</label>
+        <input type="text" id="nome" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary" placeholder="Seu nome completo" required>
+      </div>
+      <div>
+        <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary" placeholder="seu@email.com" required>
+      </div>
+      <div>
+        <label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+        <input type="tel" id="telefone" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary" placeholder="(00) 00000-0000">
+      </div>
+      <div>
+        <label for="mensagem" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+        <textarea id="mensagem" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary" placeholder="Como podemos ajudar?"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-primary text-white font-semibold px-8 py-4 rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+        Enviar Mensagem
+      </button>
+    </form>
+  </div>
+  <div class="flex flex-col justify-start -mt4 -ml8  ">
+    <div class="mb-8">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4">Informações de Contato</h3>
+      <p class="text-gray-600 mb-6">
+        Estamos prontos para transformar sua empresa com soluções inteligentes e criativas.
+      </p>
+      <div class="space-y-4">
+        <div class="flex items-center">
+          <a href="https://wa.me/5511974323410" target="_blank" class="flex items-center">
+            <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-whatsapp-line text-primary"></i>
+            </div>
+            <span class="text-gray-700">(11) 97432-3410</span>
+          </a>
+        </div>
+        <div class="flex items-center">
+          <a href="https://www.instagram.com/vox.strategy.ai/" target="_blank" class="flex items-center">
+            <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-instagram-line text-primary"></i>
+            </div>
+            <span class="text-gray-700">@voxstrategyai</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+</section>
+<footer class="gradient-bg py-12 text-white">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="text-2xl font-['Pacifico'] mb-6">
+          <img src="assets/images/VOX.png" alt="Logo da Vox" class="h-24 object-contain" />
+        </h3>
+        </h3>
+        <p class="mb-6">Soluções criativas com inteligência real</p>
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/vox.strategy.ai/"" class="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/vox-strategy-ia/" class="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
+            <i class="ri-linkedin-line"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-6">Links Rápidos</h4>
+        <ul class="space-y-3">
+          <li><a href="#sobre" class="hover:underline">Sobre</a></li>
+          <li><a href="#servicos" class="hover:underline">Serviços</a></li>
+          <li><a href="#quem-somos" class="hover:underline">Quem Somos</a></li>
+          <li><a href="#videos" class="hover:underline">Vídeos</a></li>
+          <li><a href="#contato" class="hover:underline">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-6">Contato</h4>
+        <ul class="space-y-3">
+          <li class="flex items-center">
+            <i class="ri-whatsapp-line mr-3"></i>
+            <a href="https://wa.me/5511974323410" target="_blank" class="text-white hover:underline">
+              (11) 97432-3410
+            </a>
+          </li>
+          <li class="flex items-center">
+            <i class="ri-mail-line mr-3"></i>
+            <a href="https://wa.me/5511974323410" class="text-white hover:underline">
+              vox.strategy.ia@gmail.com
+            </a>
+          </li>
+          <li class="flex items-center">
+            <i class="ri-map-pin-line mr-3"></i>
+            <span>São Paulo - SP</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white border-opacity-20 mt-12 pt-6 text-center text-sm">
+      <p>© 2025 Vox Strategy AI. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
+  <a href="https://wa.me/5511974323410" class="bg-[#3a0142] text-white px-4 py-3 rounded-full shadow-lg flex items-center whitespace-nowrap">
+    <i class="ri-whatsapp-line mr-2"></i>
+    WhatsApp
+  </a>
+</div>
+
+
+<script id="mobile-menu-script">
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+
+      if (mobileMenu.classList.contains('hidden')) {
+        menuToggle.innerHTML = '<i class="ri-menu-line ri-2x"></i>';
+      } else {
+        menuToggle.innerHTML = '<i class="ri-close-line ri-2x"></i>';
+      }
+    });
+
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+        menuToggle.innerHTML = '<i class="ri-menu-line ri-2x"></i>';
+      });
+    });
+  });
+</script>
+
+<script id="scroll-script">
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-md');
+        header.classList.remove('bg-opacity-95');
+        header.classList.add('bg-opacity-98');
+      } else {
+        header.classList.remove('shadow-md');
+        header.classList.remove('bg-opacity-98');
+        header.classList.add('bg-opacity-95');
+      }
+    });
+
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+<script>
+  document.getElementById("form-contato").addEventListener("submit", function (e) {
+    e.preventDefault(); // impede o envio tradicional
+
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    const texto = `*Nova mensagem do site:*\n\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Mensagem:* ${mensagem}`;
+    const telefoneDestino = "5511974323410"; // número da Vox
+
+    const url = `https://wa.me/${telefoneDestino}?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
+  });
+</script>
+
+</body>
+</html>
