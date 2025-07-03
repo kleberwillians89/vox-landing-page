@@ -89,6 +89,7 @@
         <a href="#quem-somos" class="text-gray-700 hover:text-primary font-medium transition-colors">Quem Somos</a>
         <a href="#videos" class="text-gray-700 hover:text-primary font-medium transition-colors">Vídeos</a>
         <a href="#contato" class="text-gray-700 hover:text-primary font-medium transition-colors">Contato</a>
+        <a href="/politica-de-privacidade.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Politica de privacidade</a>
       </nav>
 
       <!-- Botão do menu mobile -->
@@ -107,6 +108,7 @@
         <a href="#quem-somos" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Quem Somos</a>
         <a href="#videos" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Vídeos</a>
         <a href="#contato" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contato</a>
+        <a href="/politica-de-privacidade.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Politica de privacidade</a>
       </div>
     </div>
     
@@ -485,6 +487,35 @@
     window.open(url, "_blank");
   });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const botao = document.getElementById("aceitar-cookies");
+
+    if (localStorage.getItem("cookies-aceitos")) {
+      banner.style.display = "none";
+    }
+
+    botao.addEventListener("click", () => {
+      localStorage.setItem("cookies-aceitos", "true");
+      banner.style.display = "none";
+    });
+  });
+</script>
+
+
+<div id="cookie-banner" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white p-6 rounded-lg shadow-xl max-w-md text-center">
+    <p class="text-gray-800 text-sm">
+      Este site utiliza cookies para melhorar sua experiência. Ao continuar, você concorda com nossa
+      <a href="#" class="underline text-purple-700 font-semibold">Política de Privacidade</a>.
+    </p>
+    <button id="aceitar-cookies" class="mt-4 bg-purple-700 text-white px-6 py-2 rounded hover:bg-purple-800 transition">
+      Aceitar
+    </button>
+  </div>
+</div>
 
 </body>
 </html>
