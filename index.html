@@ -18,6 +18,10 @@
             primary: '#710073',
             secondary: '#3a0142'
           },
+        extend: {
+          fontFamily: {
+            sans: ['Garet', 'sans-serif'],
+          },
           borderRadius: {
             'none': '0px',
             'sm': '4px',
@@ -35,13 +39,31 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Garet';
+      src: url('/assets/fonts/Garet-Regular.woff2') format('woff2'),
+           url('/assets/fonts/Garet-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+  
+    @font-face {
+      font-family: 'Garet';
+      src: url('/assets/fonts/Garet-Bold.woff2') format('woff2'),
+           url('/assets/fonts/Garet-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+  <style>
     :where([class^="ri-"])::before { content: "\f3c2"; }
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Garet', sans-serif;
       scroll-behavior: smooth;
-    }
+}
     .gradient-bg {
-      background: linear-gradient(135deg, #3a0142 0%, #710073 100%);
+      background: radial-gradient(ellipse at center, #4a0050 0%, #250028 100%);
+      color: white;
     }
     .card-hover:hover {
       transform: translateY(-5px);
@@ -78,13 +100,12 @@
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       
       <!-- Logotipo -->
-      <a href="#" class="flex items-center">
+      <a href="https://www.instagram.com/vox.strategy.ai/" target="_blank" rel="noopener class="flex items-center">
         <img src="assets/images/VOX1.png" alt="Vox Strategy" class="h-20 mt-1 scale-[1.6]">
       </a>
 
       <!-- Menu de navegação para desktop -->
       <nav class="hidden md:flex space-x-8">
-        <a href="#sobre" class="text-gray-700 hover:text-primary font-medium transition-colors">Sobre</a>
         <a href="#servicos" class="text-gray-700 hover:text-primary font-medium transition-colors">Serviços</a>
         <a href="#quem-somos" class="text-gray-700 hover:text-primary font-medium transition-colors">Quem Somos</a>
         <a href="#videos" class="text-gray-700 hover:text-primary font-medium transition-colors">Vídeos</a>
@@ -119,20 +140,21 @@
     <div class="max-w-5xl mx-auto mb-12">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4">O mais importante da IA é o I, da inteligência.</h2>
       <p class="text-2xl text-white mb-6">Deixe a IA trabalhar por você.
-        Agência digital estratégica. Inteligência artificial e automação.</p>
+        Uma Agência digital estratégica, de conteúdo, 
+        inteligência artificial e automação</p>
       <p class="text-xl text-white/90 leading-relaxed mb-8">
-        A Vox tem profissionais com anos de experiência em marketing e criação publicitária, que entendem de gente e sabem contar boas histórias. É essa inteligência criativa, estratégica e humana, que pensa, interpreta e usa a IA para gerar conteúdo.
       </p>
     </div>
     <div class="max-w-5xl mx-auto mb-8">
       <video autoplay controls loading="lazy" class="rounded-lg shadow-xl w-full h-auto">
-        <source src="assets/images/videos/site-em-construcao.mp4" type="video/mp4">
+        <source src="assets/images/videos/vox.mp4" type="video/mp4">
         Seu navegador não suporta vídeos HTML5.
       </video>
     </div>
-    <a href="#contato" class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
-      Fale com a Vox
+    <a href="#contato" class="inline-block bg-white text-[#710073] font-semibold px-8 py-4 rounded-button hover:bg-gray-200 transition-colors whitespace-nowrap">
+  Fale com a Vox
     </a>
+
   </div>
 </section>
 </section>
@@ -219,7 +241,7 @@
   <div class="container mx-auto px-6">
     
     <!-- Título da seção -->
-    <h2 class="text-4xl font-bold text-center mb-16 text-white">Nossos fundadores</h2>
+    <h2 class="text-4xl font-bold text-center mb-16 text-white">Fundadores</h2>
     
     <!-- Grid com os membros da equipe -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -237,7 +259,9 @@
           Estrategista de marketing com mais de 15 anos de experiência em multinacionais como Colgate-Palmolive, Kimberly-Clark e Espaçolaser.
           Atua na interseção entre branding, tecnologia e inteligência artificial, desenvolvendo soluções de posicionamento e conteúdo para marcas.
         </p>
-        <a href="https://www.linkedin.com/in/bruno-siqueira/" target="_blank" class="text-primary hover:underline">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/bruno-siqueira/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4">
+          <img src="assets/images/logolinkedin.png" alt="LinkedIn" class="w-14 h-14 mx-auto hover:scale-120 transition-transform">
+        </a>
       </div>
 
       <!-- Card: Danilo Portela -->
@@ -250,10 +274,11 @@
         <h3 class="text-2xl font-bold text-gray-800 mb-2">Danilo Portela</h3>
         <p class="text-primary font-medium mb-4">CTO & Especialista em IA</p>
         <p class="text-gray-600">
-          Criatividade está no seu DNA, seja como redator ou liderando campanhas publicitárias como diretor de criação durante os mais de 15 anos à frente da BG9 Comunicação – Top agências Norte/Nordeste.
-          Foi o responsável por desenvolver o marketing digital na agência, integrando análise de dados e de comportamento do consumidor às estratégias criativas.
+          Publicitário com mais de 15 anos de experiência em criatividade, branding e performance. Foi sócio e diretor de criação da BG9 Comunicação, 
+          onde integrou dados e tecnologia às estratégias criativas. Formado pelo Executive MBA em Digital Data Marketing da FIAP, atua unindo visão estratégica, análise de comportamento e marketing full funnel para gerar resultados relevantes.
         </p>
-        <a href="https://www.linkedin.com/in/danilo-portela-52693b34/" target="_blank" class="text-primary hover:underline">LinkedIn</a>
+          <img src="assets/images/logolinkedin.png" alt="LinkedIn" class="w-14 h-14 mx-auto hover:scale-12-0 transition-transform">
+        </a>
       </div>
 
     </div>
@@ -262,26 +287,58 @@
 
 <section id="videos" class="py-20 bg-gray-50">
   <div class="container mx-auto px-6">
-    <h2 class="text-5xl font-bold text-center mb-16 text-gray-800">Nossas Produções 100% feitas com IA </h2>
+    <h2 class="text-5xl font-bold text-center mb-16 text-gray-800">
+      Vídeos 100% feitos com IA
+    </h2>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      <div class="video-container" style="padding-bottom: 60%;">
-        <video controls loading="lazy" class="rounded-lg shadow-lg">
+      
+      <!-- Vídeo 1 -->
+      <div class="aspect-w-9 aspect-h-16">
+        <video controls loading="lazy" class="rounded-lg shadow-lg w-full h-full object-cover">
           <source src="assets/images/videos/treelife_omega.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="video-container" style="padding-bottom: 60%;">
-        <video controls loading="lazy" class="rounded-lg shadow-lg">
-          <source src="assets/images/videos/vox.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="video-container" style="padding-bottom: 60%;">
-        <video controls loading="lazy" class="rounded-lg shadow-lg">
+
+      <!-- Vídeo 2 -->
+      <div class="aspect-w-9 aspect-h-16">
+        <video controls loading="lazy" class="rounded-lg shadow-lg w-full h-full object-cover">
           <source src="assets/images/videos/deep_sleep_5.mp4" type="video/mp4">
         </video>
       </div>
+
+      <!-- Vídeo 3 -->
+      <div class="aspect-w-9 aspect-h-16">
+        <video controls loading="lazy" class="rounded-lg shadow-lg w-full h-full object-cover">
+          <source src="assets/images/videos/Medica_boa.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Vídeo 4 -->
+      <div class="aspect-w-9 aspect-h-16">
+        <video controls loading="lazy" class="rounded-lg shadow-lg w-full h-full object-cover">
+          <source src="assets/images/videos/Academia.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Vídeo 5 -->
+      <div class="aspect-w-9 aspect-h-16">
+        <video controls loading="lazy" class="rounded-lg shadow-lg w-full h-full object-cover">
+          <source src="assets/images/videos/COlgate_Otima.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Vídeo 6 -->
+      <div class="aspect-w-9 aspect-h-16">
+        <video controls loading="lazy" class="rounded-lg shadow-lg w-full h-full object-cover">
+          <source src="assets/images/videos/Clonapure.mp4" type="video/mp4">
+        </video>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <section id="contato" class="py-20">
 <div class="container mx-auto px-6">
@@ -342,61 +399,61 @@
 </section>
 
 </section>
-<footer class="gradient-bg py-12 text-white">
-  <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div>
-        <h3 class="text-2xl font-['Pacifico'] mb-6">
-          <img src="assets/images/VOX.png" alt="Logo da Vox" class="h-24 object-contain" />
-        </h3>
-        </h3>
-        <p class="mb-6">Soluções criativas com inteligência real.</p>
-        <div class="flex space-x-4">
-          <a href="https://www.instagram.com/vox.strategy.ai/"" class="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
-            <i class="ri-instagram-line"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/vox-strategy-ia/" class="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
-            <i class="ri-linkedin-line"></i>
-          </a>
-        </div>
-      </div>
-      <div>
-        <h4 class="text-lg font-bold mb-6">Links Rápidos</h4>
-        <ul class="space-y-3">
-          <li><a href="#sobre" class="hover:underline">Sobre</a></li>
-          <li><a href="#servicos" class="hover:underline">Serviços</a></li>
-          <li><a href="#quem-somos" class="hover:underline">Quem Somos</a></li>
-          <li><a href="#videos" class="hover:underline">Vídeos</a></li>
-          <li><a href="#contato" class="hover:underline">Contato</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-lg font-bold mb-6">Contato</h4>
-        <ul class="space-y-3">
-          <li class="flex items-center">
-            <i class="ri-whatsapp-line mr-3"></i>
-            <a href="https://wa.me/5511974323410" target="_blank" class="text-white hover:underline">
-              (11) 97432-3410
-            </a>
-          </li>
-          <li class="flex items-center">
-            <i class="ri-mail-line mr-3"></i>
-            <a href="https://wa.me/5511974323410" class="text-white hover:underline">
-              vox.strategy.ia@gmail.com
-            </a>
-          </li>
-          <li class="flex items-center">
-            <i class="ri-map-pin-line mr-3"></i>
-            <span>São Paulo - SP</span>
-          </li>
-        </ul>
+<footer class="bg-gradient-to-r from-[#4a0050] to-[#250028] text-white py-12 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- COLUNA 1: LOGO + FRASE + ÍCONES -->
+    <div class="flex flex-col items-start">
+      <img src="assets/images/VOX.png" alt="Logo da Vox" class="h-[200px] w-auto object-contain mb-4" />
+      <p class="mb-6 leading-snug">Soluções criativas com<br>inteligência real.</p>
+      <div class="flex space-x-4">
+        <a href="https://www.instagram.com/vox.strategy.ai/" target="_blank" class="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
+          <i class="ri-instagram-line"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/vox-strategy-ia/" target="_blank" class="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
+          <i class="ri-linkedin-line"></i>
+        </a>
       </div>
     </div>
-    <div class="border-t border-white border-opacity-20 mt-12 pt-6 text-center text-sm">
-      <p>© 2025 Vox Strategy AI. Todos os direitos reservados.</p>
+
+    <!-- COLUNA 2: LINKS RÁPIDOS -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Links Rápidos</h4>
+      <ul class="space-y-2">
+        <li><a href="#sobre" class="hover:underline">Sobre</a></li>
+        <li><a href="#servicos" class="hover:underline">Serviços</a></li>
+        <li><a href="#quemsomos" class="hover:underline">Quem Somos</a></li>
+        <li><a href="#videos" class="hover:underline">Vídeos</a></li>
+        <li><a href="#contato" class="hover:underline">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUNA 3: CONTATO -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Contato</h4>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2">
+          <i class="ri-whatsapp-line text-xl"></i>
+          (11) 97432-3410
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="ri-mail-line text-xl"></i>
+          vox.strategy.ia@gmail.com
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="ri-map-pin-line text-xl"></i>
+          São Paulo - SP
+        </li>
+      </ul>
     </div>
   </div>
+
+  <hr class="border-t border-white/20 my-6" />
+  <div class="text-center text-sm text-white">
+    © 2025 Vox Strategy AI. Todos os direitos reservados.
+  </div>
 </footer>
+
 
 <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
   <a href="https://wa.me/5511974323410" class="bg-[#3a0142] text-white px-4 py-3 rounded-full shadow-lg flex items-center whitespace-nowrap">
